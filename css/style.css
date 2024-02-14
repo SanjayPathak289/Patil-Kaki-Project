@@ -667,16 +667,18 @@ footer p {
     #leftHero {
         align-items: center;
         margin-left: 0;
-        height: 45vh;
+        height: 50vh;
         text-align: center;
     }
 
     #rightHero {
         height: 15vh;
     }
-    #founderSection{
+
+    #founderSection {
         height: 100vh;
     }
+
     #founderSectionSub {
         flex-direction: column;
     }
