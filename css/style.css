@@ -647,7 +647,7 @@ footer p {
     }
 
     #heroSection {
-        min-height: 100vh;
+        min-height: 80vh;
     }
 
     #heroSectionSub {
@@ -667,14 +667,16 @@ footer p {
     #leftHero {
         align-items: center;
         margin-left: 0;
-        height: 50vh;
+        height: 45vh;
         text-align: center;
     }
 
     #rightHero {
-        height: 30vh;
+        height: 15vh;
     }
-
+    #founderSection{
+        height: 100vh;
+    }
     #founderSectionSub {
         flex-direction: column;
     }
@@ -746,5 +748,18 @@ footer p {
 
     footer p {
         font-size: 1.4rem;
+    }
+
+    #formBox {
+        width: 90%;
+    }
+
+    #form {
+        padding: 0;
+    }
+
+    .inputField {
+        width: 90%;
+        padding: 0.8rem;
     }
 }

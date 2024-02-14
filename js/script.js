@@ -49,7 +49,7 @@ if (isModalOpen == null) {
         formBox.classList.toggle("show");
         formModal.classList.toggle("overlay");
         localStorage.setItem("isModalOpen", false)
-    }, 15000);
+    }, 1000);
 }
 
 
