@@ -75,11 +75,11 @@ hamburgerDiv.addEventListener("click", () => {
 
 
 const clickLi = () => {
-    navbar.classList.toggle("navToggle");
-    navLogo.classList.toggle("navLogoToggle");
-    navLinks.classList.toggle("navLinksToggle");
-    hamburgerDiv.classList.toggle("hamBurgerStyle")
-    hamburgerIcon.classList.toggle("mobile-hamLine");
+    navbar.classList.remove("navToggle");
+    navLogo.classList.remove("navLogoToggle");
+    navLinks.classList.remove("navLinksToggle");
+    hamburgerDiv.classList.remove("hamBurgerStyle")
+    hamburgerIcon.classList.remove("mobile-hamLine");
 }
 var lis = navLinksUl.getElementsByTagName('li');
 for (var i = 0; i < lis.length; i++) {
