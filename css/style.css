@@ -1,0 +1,750 @@
+:root {
+    --primary: #008000;
+    --secondary: #fada5e;
+    --onPrimary: #808080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url("../fonts/GeneralSans-Regular.otf") format("opentype");
+}
+
+body {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-family: "General Sans";
+}
+
+nav {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--secondary);
+    box-shadow: 3px 3px var(--primary);
+    border-radius: 2rem;
+}
+
+#hamburgerDiv {
+    display: none;
+}
+
+#navLogo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#navLogo img {
+    width: 30%;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+#navLinks {
+    width: 50%;
+}
+
+#navLinks ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#navLinks ul li {
+    display: inline-block;
+    margin-right: 3rem;
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.navToggle {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 0;
+    margin-top: 0;
+}
+
+.navLogoToggle {
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+.navLinksToggle {
+    display: flex !important;
+}
+
+#navLinks ul li a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+#navLinks ul li:hover {
+    background-color: var(--secondary);
+    transition: all 0.2s linear;
+}
+
+#navLinks ul li:hover a {
+    color: var(--primary);
+}
+
+.hamBurgerStyle {
+    position: absolute;
+    top: 2%;
+    right: 0;
+}
+
+.mobile-hamLine {
+    transition: all linear 0.5s;
+    transform: rotate(360deg);
+    background: transparent !important;
+}
+
+.mobile-hamLine::before {
+    background-color: black !important;
+    transform: rotate(45deg) !important;
+}
+
+.mobile-hamLine::after {
+    background-color: black !important;
+    transform: rotate(-45deg) !important;
+}
+
+#heroSection {
+    width: 100%;
+    min-height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#heroSectionSub {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#leftHero {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+#leftHero p {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-size: 4.5rem;
+    font-weight: 900;
+    word-spacing: 2px;
+}
+
+.diffSignUp {
+    background-color: var(--primary) !important;
+    box-shadow: 3px 3px var(--secondary) !important;
+    color: white !important;
+}
+
+.signUpBtn {
+    background-color: var(--secondary);
+    box-shadow: 3px 3px var(--primary);
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 1.2rem;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.signUpBtn:hover {
+    scale: 1.1;
+    transition: all 0.1s linear;
+}
+
+#rightHero {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#heroImageDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+    position: relative;
+}
+
+#heroImageDiv img {
+    width: 75%;
+    z-index: 1;
+}
+
+#founderSection {
+    width: 100%;
+    min-height: 80vh;
+    margin-top: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-margin-top: 2rem;
+}
+
+
+#founderSectionSub {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftFounder {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+#rightFounder {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.founderDiv {
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    width: 60%;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 3px 3px var(--primary);
+    font-size: 1.5rem;
+}
+
+.founderDiv:hover {
+    scale: 1.05;
+    transition: all 0.2s linear;
+}
+
+#founderImageDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+}
+
+#founderImageDiv img {
+    width: 70%;
+    height: 70%;
+    z-index: 1;
+    border-radius: 2rem;
+    border: 4px solid var(--primary);
+}
+
+#futureSection {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.futureBox {
+    max-width: 25%;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 2rem;
+    border-radius: 1.7rem;
+    cursor: pointer;
+    background-size: 100% 200%;
+    transition: all .5s linear;
+    z-index: 99;
+}
+
+.futureBox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top center;
+    background: var(--secondary);
+    z-index: -1;
+    transition: transform 0.3s;
+    border-radius: 1.7rem;
+}
+
+.futureBox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top center;
+    background: var(--primary);
+    z-index: -2;
+    transition: transform 0.2s;
+    border-radius: 1.7rem;
+}
+
+.futureBox:hover {
+    transform: scale(1);
+    transition: all 0.15s linear;
+}
+
+.futureBox:hover::before {
+    transform: scaleY(1);
+}
+
+.futureBox:hover::after {
+    transform: scaleY(1);
+}
+
+.futureimgBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.futureimgBox i {
+    font-size: 3rem;
+}
+
+.futureTextBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.futureTextBox p {
+    text-align: center;
+}
+
+#countdownSection {
+    width: 100%;
+    height: 80vh;
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#countdown {
+    width: 70%;
+    height: 80%;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--secondary);
+}
+
+#countdownUpper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--primary);
+    border-radius: 0% 10% 48% 54% / 10% 0% 18% 17%;
+}
+
+#countdownUpper p {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: white;
+}
+
+#countdownUpper p {
+    margin-bottom: 1.5rem;
+}
+
+#countdownDown {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+
+#mainCountdown {
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainCountdown p {
+    height: 100px;
+    width: 100px;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+#colonTime {
+    background-color: transparent !important;
+    font-size: 6rem !important;
+    font-weight: 200 !important;
+}
+
+#triggerSection {
+    width: 100%;
+    height: 20vh;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #00800030;
+    border-radius: 2rem;
+}
+
+#triggerBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+#lefttrigger {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lefttrigger {
+    text-align: center;
+}
+
+#righttrigger {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#offPrice {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+}
+
+#strikeP {
+    text-decoration: line-through;
+}
+
+footer {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#formModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formBox {
+    width: 50%;
+    height: 50vh;
+    display: none;
+    border: 2px solid rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    z-index: 99;
+    border-radius: 1.2rem;
+    position: relative;
+}
+
+#closeBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#closeBtn:hover {
+    transform: scale(1.2);
+    transition: all 0.2s linear;
+}
+
+@keyframes modalAnimation {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.show {
+    display: flex !important;
+    animation: modalAnimation 0.4s linear;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.46);
+    z-index: 99;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.inputField {
+    width: 70%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    outline: none;
+    border: 2px solid #fada5e50;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #navLinks {
+        display: none;
+    }
+
+    #hamburgerDiv {
+        width: 50%;
+        display: grid;
+        place-items: flex-end;
+        padding-right: 2rem;
+        border-radius: 20px;
+    }
+
+    #hamburgerIcon::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        background-color: var(--onPrimary);
+        transform: translateY(-6px);
+    }
+
+    #hamburgerIcon {
+        display: block;
+        height: 3px;
+        width: 25px;
+        background-color: var(--onPrimary);
+    }
+
+    #hamburgerIcon::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        background-color: var(--onPrimary);
+        transform: translateY(6px);
+    }
+
+    #navLinks {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navLinks ul {
+        flex-direction: column;
+        height: 50vh !important;
+        justify-content: space-evenly !important;
+    }
+
+    #navLinks ul li {
+        margin: 0;
+    }
+
+    #navLogo img {
+        width: 48%;
+        margin-bottom: 1.4rem;
+
+    }
+
+    #heroSection {
+        min-height: 100vh;
+    }
+
+    #heroSectionSub {
+        flex-direction: column;
+    }
+
+    #leftHero,
+    #rightHero {
+        width: 100%;
+    }
+
+    #leftHero p,
+    #rightHero p {
+        font-size: 2.5rem;
+    }
+
+    #leftHero {
+        align-items: center;
+        margin-left: 0;
+        height: 50vh;
+        text-align: center;
+    }
+
+    #rightHero {
+        height: 30vh;
+    }
+
+    #founderSectionSub {
+        flex-direction: column;
+    }
+
+    #leftFounder,
+    #rightFounder {
+        width: 100%;
+    }
+
+    #leftFounder {
+        height: auto;
+    }
+
+    #rightFounder {
+        height: fit-content;
+    }
+
+    .founderDiv {
+        padding: 1rem;
+        width: 90%;
+        margin-top: 1.5rem;
+    }
+
+    #futureSection {
+        flex-direction: column;
+    }
+
+    .futureBox {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    #countdown {
+        width: 100%;
+        height: 60%;
+    }
+
+    #countdownUpper p {
+        font-size: 1.2rem;
+    }
+
+    #mainCountdown {
+        width: 100%;
+    }
+
+    #mainCountdown p {
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    #triggerSection {
+        height: auto;
+    }
+
+    #triggerBox {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    #lefttrigger {
+        width: 100%;
+    }
+
+    #righttrigger {
+        width: 100%;
+    }
+
+    footer p {
+        font-size: 1.4rem;
+    }
+}
